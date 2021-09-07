@@ -1,0 +1,23 @@
+{
+  "name": "omnipresent-tht-employees",
+  "version": "1.0.0",
+  "description": "return a pseudo list of employees",
+  "main": "dist/app.js",
+  "scripts": {
+    "start": "tsc && node dist/app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryuheechul/omnipresent-tht-employees"
+  },
+  "author": "Heechul Ryu",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
