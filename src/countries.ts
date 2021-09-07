@@ -23,15 +23,17 @@ interface Country {
  currencies: Currency[];
  timezones: string[];
  name: string;
+ region: string;
 }
 
 function compact(full: Country) {
-  const { languages, currencies, timezones, name } = full;
+  const { languages, currencies, timezones, name, region } = full;
   return {
     languages,
     currencies,
     timezones,
-    name
+    name,
+    region,
   }
 }
 

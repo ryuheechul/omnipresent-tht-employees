@@ -1,5 +1,4 @@
-import { equal } from "assert";
-import chai from "chai";
+import chai, { expect } from "chai";
 
 import {
   countriesByCodes,
@@ -8,20 +7,19 @@ import {
 
 describe("countryByCode", () => {
   it("gbr", async () => {
-    const country = await countryByCode('GBR');
+    const country = await countryByCode('gbr');
 
-    equal(
-      'GBP',
+    expect(
       country.currencies[0].code
-    );
+    ).to.be.equal('GBP');
   });
 
   it("GBR", async () => {
     const country = await countryByCode('GBR');
-    equal(
-      'GBP',
+
+    expect(
       country.currencies[0].code
-    );
+    ).to.be.equal('GBP');
   });
 });
 
