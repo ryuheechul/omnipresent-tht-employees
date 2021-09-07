@@ -21,7 +21,7 @@ function addIdentifier(employee: Employee) {
     return employee;
   }
 
-  const additionalIdentifier = `${firstName}${lastName}${dateOfBirth.replace(/\//g, '')}`;
+  const additionalIdentifier = `${firstName.toLowerCase()}${lastName.toLowerCase()}${dateOfBirth.replace(/\//g, '')}`;
 
   return {
     ...employee,

@@ -4,7 +4,7 @@
   "description": "return a pseudo list of employees",
   "main": "dist/app.js",
   "scripts": {
-    "start": "tsc && node dist/app.js",
+    "start": "tsc && node dist/src/app.js",
     "dev": "ts-node-dev --respawn --transpile-only src/app.ts",
     "test": "mocha",
     "test:watch": "mocha -w"

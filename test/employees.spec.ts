@@ -35,7 +35,7 @@ describe("polish", () => {
         expect(
       employees[1].additionalIdentifier
         ).to.be.equal(
-      'LisaTestora11071984'
+      'lisatestora11071984'
     );
   });
 });
