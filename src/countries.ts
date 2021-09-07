@@ -34,3 +34,24 @@ function compact(full: Country) {
     name
   }
 }
+
+async function countryByCodeWithCode(code: string) {
+  const result: any = {};
+  result[code] = await countryByCode(code);
+  return result;
+}
+
+export async function countryByCodes(codes: string[]) {
+  const csSet = new Set(
+    codes.map(c => c.toUpperCase())
+  );
+
+  const cs = Array.from(csSet);
+
+  return (
+    await Promise.all(
+      cs
+        .map(async (code) => await countryByCodeWithCode(code))
+    )
+  ).reduce((acc, o) => ({ ...acc, ...o }));
+}

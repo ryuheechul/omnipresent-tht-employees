@@ -1,5 +1,10 @@
 import { equal } from "assert";
-import { countryByCode } from '../src/countries';
+import chai from "chai";
+
+import {
+  countryByCodes,
+  countryByCode
+} from '../src/countries';
 
 describe("countryByCode", () => {
   it("gbr", async () => {
@@ -17,5 +22,13 @@ describe("countryByCode", () => {
       'GBP',
       country.currencies[0].code
     );
+  });
+});
+
+describe("countryByCodes", () => {
+  it("gbr, GBR, US", async () => {
+    const result = await countryByCodes(['gbr','GBR', 'US']);
+
+    chai.assert.hasAllKeys(result, ['US', 'GBR']);
   });
 });

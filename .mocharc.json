@@ -1,5 +1,8 @@
 {
   "extension": ["ts"],
-  "spec": "test/**/*.spec.ts",
+  "spec": "test/**/*.spec.*",
+  "watch-files": [
+    "src"
+  ],
   "require": "ts-node/register"
 }
