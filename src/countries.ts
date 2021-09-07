@@ -41,7 +41,7 @@ async function countryByCodeWithCode(code: string) {
   return result;
 }
 
-export async function countryByCodes(codes: string[]) {
+export async function countriesByCodes(codes: string[]) {
   const csSet = new Set(
     codes.map(c => c.toUpperCase())
   );

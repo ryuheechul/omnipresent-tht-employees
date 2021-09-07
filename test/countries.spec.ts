@@ -2,7 +2,7 @@ import { equal } from "assert";
 import chai from "chai";
 
 import {
-  countryByCodes,
+  countriesByCodes,
   countryByCode
 } from '../src/countries';
 
@@ -25,9 +25,9 @@ describe("countryByCode", () => {
   });
 });
 
-describe("countryByCodes", () => {
+describe("countriesByCodes", () => {
   it("gbr, GBR, US", async () => {
-    const result = await countryByCodes(['gbr','GBR', 'US']);
+    const result = await countriesByCodes(['gbr','GBR', 'US']);
 
     chai.assert.hasAllKeys(result, ['US', 'GBR']);
   });

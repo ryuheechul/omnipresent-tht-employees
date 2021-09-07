@@ -1,10 +1,10 @@
 import express from 'express';
-import employees from './employees.json';
+import { polish } from './employees';
 
 const app = express();
 const port = 3000;
-app.get('/', (req, res) => {
-  res.send(employees);
+app.get('/', async (req, res) => {
+  res.send(await polish());
 });
 
 app.listen(port, () => {
