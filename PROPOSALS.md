@@ -13,6 +13,7 @@ Besides language specifics, I would consider the following in the future:
 - decouple components from each other by introducing interface and dependency injection
 - more unit tests for edge cases
 - add integration tests to ensure it communicates properly via API
+- introduce code linter and code formatter to leave a little room for ambiguity and aim for fewer toils on detecting the possible issues manually
 
 ## Persistence layer
 
